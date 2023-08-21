@@ -9,7 +9,7 @@ class Master:
 
     def __init__(self, filename_txt, filename_csv, daylight_csv_fn, current_csv_fn, proposed_csv_fn):
         
-        # constructing file name variables 
+        # constructing file name attributes (variables) 
         self.filename_txt = filename_txt
         self.filename_csv = filename_csv
         self.daylight_csv_fn = daylight_csv_fn
