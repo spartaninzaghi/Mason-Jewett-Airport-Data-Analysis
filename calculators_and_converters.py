@@ -11,7 +11,6 @@ class CalculatorsAndConverters:
         """ Return crosswind componend of `wind_speed`.
         """
         crosswind = wind_speed * Sine(wind_direction)
-        
         return crosswind
 
     
@@ -19,7 +18,6 @@ class CalculatorsAndConverters:
         """ Convert a speed value in `mph` to `knots` (nautical mph).
         """
         speed_in_Knots = self.convert_to_flt(mph) * v.KNOTS_IN_1MPH
-
         return speed_in_Knots
 
     
@@ -31,7 +29,6 @@ class CalculatorsAndConverters:
             value_as_num = "".join([n for n in value if n.isnumeric()])           
             flt = float(value_as_num)
         else: print("Error: Unconvertible type for this function")
-
         return flt
 
 
@@ -39,7 +36,6 @@ class CalculatorsAndConverters:
         """ Convert a string to an integer. Non-numeric values get returned as `-1`.
         """
         i = int( self.convert_to_flt(value) )
-
         return i
 
     def daylight_time(self, t_twilight: int) -> int:
@@ -47,7 +43,6 @@ class CalculatorsAndConverters:
         eg. `15:00` (represented as `1500`) becomes `1600` after adding `1 hour` as `100`
         """
         t_daylight = t_twilight + 100
-
         return t_daylight
 
     def fill_in_missing_data_with_valid_predecessor(self, super_list: list):
@@ -68,8 +63,7 @@ class CalculatorsAndConverters:
     def is_missing(self, value) -> bool:
         """ Returns `True` if a data cell is missing a valid value (i.e.contains string `m` or `M`)
         """
-        if type(value) == str and value in "mM": return True
-        else: return False
+        return type(value) == str and value in ["m", "M"]
 
     def make_m_d_list(self, forwardslash_sep_mm_dd_yy: str) -> list:
         """ Return a 2-length integer list: [month, day]. eg. "3/31/2021" becomes `[3, 31]`
@@ -134,8 +128,8 @@ class CalculatorsAndConverters:
         months_dict = self.months_dict()
 
         for m_name, m_num in months_dict.items():
-            if m_name == month_name: month_number = m_num
-                
+            if m_name == month_name: 
+                month_number = m_num
         return month_number
         
 
