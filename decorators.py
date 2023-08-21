@@ -40,7 +40,6 @@ class Decorators:
         yyyy = str(2021)
 
         slashed_date = f"{mm}/{dd}/{yyyy}"
-
         return slashed_date
 
     def decorate_row_output(self, row: list):
