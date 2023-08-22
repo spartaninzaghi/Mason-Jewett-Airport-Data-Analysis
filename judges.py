@@ -9,9 +9,6 @@ class Judges:
         self.dec = Decorators()
 
     def wind_is_best_aligned_with(self, wind_direction_deg):
-        #SEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-        # with open("seer.txt", "a") as see:
-
         ew_closeness_100 = abs(wind_direction_deg - 100)
         ew_closeness_280 = abs(wind_direction_deg - 280)
         ew_best_alignment = min(ew_closeness_100, ew_closeness_280)
@@ -21,12 +18,6 @@ class Judges:
         ns_best_alignment = min(ns_closeness_10, ns_closeness_190)
 
         best_alignment_ewns = min(ew_best_alignment, ns_best_alignment)
-
-            # print(wind_direction_deg, file=see)
-            # print(f"|East 100: {ew_closeness_100:3d} | West 280: {ew_closeness_280:3d}|", file=see)
-            # print(f"|Nort 010: {ns_closeness_10:3d} | Sout 190: {ns_closeness_190:3d}|", file=see)
-            # print(f"-- Best Alignment: {best_alignment_ewns}", file=see)
-            # print(file=see)
 
         if best_alignment_ewns == ew_best_alignment:
             return "east-west"
