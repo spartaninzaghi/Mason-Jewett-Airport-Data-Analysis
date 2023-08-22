@@ -84,7 +84,6 @@ class CalculatorsAndConverters:
         yyyy = str(2021)
 
         date_str = f"{mm}/{dd}/{yyyy}"
-
         return date_str
     
     def merge_time_hm(self, colon_sep_time_h_m: str) -> int:
