@@ -118,7 +118,6 @@ class CalculatorsAndConverters:
         """ Retrieve the name of a particular month by passing its number as argument.
         """
         months_dict = self.months_dict()
-
         month_name = months_dict[month_number]
         return month_name
 
