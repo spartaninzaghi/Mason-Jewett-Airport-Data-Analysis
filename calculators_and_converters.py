@@ -109,8 +109,7 @@ class CalculatorsAndConverters:
     def months_dict(self):
         """ Create a dictionary of all month numbers as keys and month names as values.
         """
-        months_dict = dict(   zip(v.MONTH_NUMBERS, v.month_names)  )
-
+        months_dict = dict(zip(v.MONTH_NUMBERS, v.month_names))
         return months_dict
 
     def month_name_from_number(self, month_number: int) -> str:
